@@ -54,7 +54,7 @@
                                         <div class="news-content pull-left">
                                             <h6><a href="#">{{ $post->title }}</a></h6>
                                             <p class="news-short-description margint10">{{ $post->description }}</p>
-                                            <a class="active-color" href="{{ route('client.blog.detail', $post->id) }}">[...]</a>
+                                            <a class="active-color" href="{{ route('client.blog.detail', $base_lang_id == session('locale') ? $post->id : $post->lang_parent_id) }}">[...]</a>
                                         </div>
                                     </div>
                                 @endforeach

@@ -12,6 +12,7 @@ use App\Models\Province;
 use App\Models\Comment;
 use App\Models\WebSetting;
 use App\Repositories\WebSetting\WebSettingRepository;
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Cookie;
@@ -38,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $urlGenerator)
     {
         /**
          * Admin
